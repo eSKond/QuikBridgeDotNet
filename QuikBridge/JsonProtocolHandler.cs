@@ -229,7 +229,7 @@ namespace QuikBridge
                             Console.WriteLine(Encoding.UTF8.GetString(pdoc));
                             if (_filledSz - i - 1 > 0)
                             {
-                                Buffer.BlockCopy(_incommingBuf, i, _incommingBuf, 0, _filledSz - i - 1);
+                                Buffer.BlockCopy(_incommingBuf, i + 1, _incommingBuf, 0, _filledSz - i - 1);
                                 Console.WriteLine("INCOMMING BUFFER AFTER PDOC CUT: ");
                                 Console.WriteLine(Encoding.UTF8.GetString(_incommingBuf));
                             }
